@@ -1,0 +1,30 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "id": "http://cs-proj-srv:8083/service-login/src/login.php",
+  "required": true,
+  "properties": {
+    "code": {
+      "type": "number",
+      "id": "http://cs-proj-srv:8083/service-login/src/login.php/code",
+      "required": true
+    },
+    "data": {
+      "type": "object",
+      "id": "http://cs-proj-srv:8083/service-login/src/login.php/data",
+      "required": true,
+      "properties": {
+        "success": {
+          "type": "boolean",
+          "id": "http://cs-proj-srv:8083/service-login/src/login.php/data/success",
+          "required": true
+        }
+      }
+    },
+    "debug": {
+      "type": "object",
+      "id": "http://cs-proj-srv:8083/service-login/src/login.php/debug",
+      "required": true
+    }
+  }
+}
