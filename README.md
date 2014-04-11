@@ -58,11 +58,11 @@ On Successful Authentication a response similar to the following sample response
 If the credentials are not authentic a response similar to the following sample response is returned:
 ```javascript	
 {
-    "code": 403,
-    "data": {
-        "success": false
-    },
-    "debug": {}
+	"code": 403,
+	"data": {
+		"success": false
+	},
+	"debug": {}
 }
 ```
 	Refer to schema: response-403.json
@@ -71,12 +71,12 @@ If the credentials are not authentic a response similar to the following sample 
 On An Invalid HTTP Method a response similar to the following sample response is returned:
 ```javascript
 {
-    "code": 400,
-    "data": {},
-    "debug": {
-        "data": {},
-        "message": "This service only accepts a POST Request."
-    }
+	"code": 400,
+	"data": {},
+	"debug": {
+		"data": {},
+		"message": "This service only accepts a POST Request."
+	}
 }
 ```
 	Refer to schema: response-400.json
@@ -85,11 +85,11 @@ On An Invalid HTTP Method a response similar to the following sample response is
 If a required argument is not submitted, a response similar to the following sample response is returned:
 ```javascript
 {
-    "code": 400,
-    "data": {},
-    "debug": {
-        "data": {},
-        "message": "This service requires the following arguments [username, password]."
+	"code": 400,
+	"data": {},
+	"debug": {
+		"data": {},
+		"message": "This service requires the following arguments [username, password]."
     }
 }
 ```
@@ -99,12 +99,12 @@ If a required argument is not submitted, a response similar to the following sam
 On Any Unexpected Error a response similar to the following sample response is returned:
 ```javascript
 {
-    "code": 500,
-    "data": {},
-    "debug": {
-        "data": {},
-        "message": "An exception has occured"
-    }
+	"code": 500,
+	"data": {},
+	"debug": {
+		"data": {},
+		"message": "An exception has occured"
+	}
 }
 ```
 	Refer to schema: response-500.json
