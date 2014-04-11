@@ -85,12 +85,12 @@ On An Invalid HTTP Method a response similar to the following sample response is
 If a required argument is not submitted, a response similar to the following sample response is returned:
 ```javascript
 {
-    "code": 400,
-    "data": {},
-    "debug": {
-        "data": {},
-        "message": "This service requires the following arguments [username, password]."
-    }
+	"code": 400,
+	"data": {},
+	"debug": {
+		"data": {},
+		"message": "This service requires the following arguments [username, password]."
+	}
 }
 ```
 	Refer to schema: response-400.json
