@@ -1,4 +1,4 @@
-Project H.A.S Component - Authentication Documentation
+Project H.A.S Component Documentation - Authentication Component
 ------------------------------------------------------------
 Author Group: **Home Automation Systems**
 
