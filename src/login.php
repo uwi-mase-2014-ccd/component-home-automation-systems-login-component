@@ -42,6 +42,13 @@ try {
 		// Send request to DB Component
 		$res = $client->get('http://usermanagement.somee.com/UserManagementComponent/RestServiceImpl.svc/AuthenticateUser/' . $username . '/' . $password);
 
+
+		if (isset($_GET['_debug'])) {
+			var_dump($res);
+			
+			var_dump(array('body' => (string)$res->getBody()));
+		}
+	
 		// Check if it succeeded
 		if ($res->getStatusCode() == 200) {
 			$body = $res->getBody();
@@ -56,11 +63,6 @@ try {
 						'message' => 'The response from the user management component is invalid.'
 					)
 				);
-
-				if (isset($_GET['_debug'])) {
-					var_dump($res);
-				}
-			
 				die(json_encode($response, JSON_PRETTY_PRINT));
 			}
 			
@@ -88,16 +90,12 @@ try {
 
 				echo json_encode($response, JSON_PRETTY_PRINT);
 			}
-		} else { 
-			if (isset($_GET['_debug'])) {
-				var_dump($res);
-			}
-		
+		} else {
 			$response = array(
 				'code' => 500,
 				'data' => new stdClass,
 				'debug' => array(
-					'data' => $res,
+					'data' => new stdClass,
 					'message' => 'The request to the user management component failed.'
 				)
 			);
@@ -151,10 +149,6 @@ try {
 		echo json_encode($response, JSON_PRETTY_PRINT);
 	}
 } catch (Exception $e) {
-	if (isset($_GET['_debug'])) {
-		var_dump($res);
-	}
-
 	$response = array(
 		'code' => 500,
 		'data' => new stdClass,
@@ -165,4 +159,6 @@ try {
 			'message' => 'An exception has occured.'
 		)
 	);
+	
+	echo json_encode($response, JSON_PRETTY_PRINT);
 }

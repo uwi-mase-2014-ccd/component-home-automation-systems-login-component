@@ -25,7 +25,13 @@ The _Authenticate Credentials_ web service is exposed by this component
 ###Endpoint
 This component has been deployed to the UWI server at the endpoint: 
 
-    POST http://cs-proj-srv:8083/service-login/src/login.php
+    POST http://cs-proj-srv:8083/component-login/src/login.php
+
+This component has been deployed to a public server at the endpoint: 
+
+    POST http://ticketmanager.mysoftware.io:8100/component-login/src/login.php
+
+Note: The UWI Server deployment will not work at the momment because the user management component is not yet hosted on the UWI server
 
 ###Arguments
     username: 
